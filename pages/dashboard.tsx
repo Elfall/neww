@@ -1,11 +1,11 @@
 import React from 'react'
 import { useAuth } from '../contexts/AuthContext'
 import { useRouter } from 'next/router'
-import FinancialSummary from '../components/DashboardComponents/FinancialSummary'
-import BudgetOverview from '../components/DashboardComponents/BudgetOverview'
-import RecentExpenses from '../components/DashboardComponents/RecentExpenses'
-import ScholarshipOverview from '../components/DashboardComponents/ScholarshipOverview'
-import FinancialGoals from '../components/DashboardComponents/FinancialGoals'
+import FinancialSummary from '../components/FinancialSummary'
+import BudgetOverview from '../components/BudgetOverview'
+import RecentExpenses from '../components/RecentExpenses'
+import ScholarshipOverview from '../components/ScholarshipOverview'
+import FinancialGoals from '../components/FinancialGoals'
 
 const Dashboard: React.FC = () => {
   const { user, loading } = useAuth()
