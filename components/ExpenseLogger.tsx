@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
 import { addDoc, collection } from 'firebase/firestore'
-import { db } from '../firebase/config'
+import { db } from '../lib/firebase/config'
 
 const ExpenseLogger: React.FC = () => {
   const [amount, setAmount] = useState('')
   const [category, setCategory] = useState('')
   const [date, setDate] = useState('')
+
+  const categories = [
+    'Tuition', 'Books', 'Housing', 'Food', 'Transportation', 'Entertainment', 'Other'
+  ]
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -36,14 +40,17 @@ const ExpenseLogger: React.FC = () => {
         className="w-full p-2 border rounded"
         required
       />
-      <input
-        type="text"
+      <select
         value={category}
         onChange={(e) => setCategory(e.target.value)}
-        placeholder="Category"
         className="w-full p-2 border rounded"
         required
-      />
+      >
+        <option value="">Select Category</option>
+        {categories.map((cat) => (
+          <option key={cat} value={cat}>{cat}</option>
+        ))}
+      </select>
       <input
         type="date"
         value={date}
@@ -51,7 +58,7 @@ const ExpenseLogger: React.FC = () => {
         className="w-full p-2 border rounded"
         required
       />
-      <button type="submit" className="w-full p-2 bg-blue-500 text-white rounded">
+      <button type="submit" className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600">
         Log Expense
       </button>
     </form>
