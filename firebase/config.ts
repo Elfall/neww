@@ -3,13 +3,12 @@ import { getAuth } from 'firebase/auth'
 import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
-  // Add your Firebase configuration here
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyAS6abx93NgBzxcSj6rQFVY1Q4_7lIJBFs",
+  authDomain: "next-fc7ce.firebaseapp.com",
+  projectId: "next-fc7ce",
+  storageBucket: "next-fc7ce.appspot.com",
+  messagingSenderId: "896828609274",
+  appId: "1:896828609274:web:117c083db7c689686def43"
 }
 
 const app = initializeApp(firebaseConfig)
