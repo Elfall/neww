@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'default' | 'outline' | 'ghost';
+  variant?: 'default' | 'outline' | 'ghost' | 'link';
   size?: 'default' | 'sm' | 'lg' | 'icon';
 }
 
@@ -17,6 +17,7 @@ export const Button: React.FC<ButtonProps> = ({
     default: 'bg-blue-600 text-white hover:bg-blue-700',
     outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50',
     ghost: 'text-gray-700 hover:bg-gray-100',
+    link: 'text-blue-600 hover:underline',
   };
   const sizeStyles = {
     default: 'px-4 py-2',

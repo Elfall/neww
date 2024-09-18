@@ -1,17 +1,16 @@
 import React from 'react';
-import Link from 'next/link';
-import { Wallet, GraduationCap, PieChart, Target, ChevronRight, Calendar, Filter } from "lucide-react";
+import { Wallet, GraduationCap, PieChart, Target, ChevronRight, Search, Calendar, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 
-const SidebarItem = ({ icon, text, active = false }) => (
+const SidebarItem = ({ icon, text, active = false }: { icon: React.ReactNode; text: string; active?: boolean }) => (
   <div className={`flex items-center space-x-3 p-2 rounded-lg ${active ? 'bg-purple-100 text-purple-700' : 'text-gray-600 hover:bg-purple-50'}`}>
     {icon}
     <span className="font-medium">{text}</span>
   </div>
 );
 
-const MetricCard = ({ title, value, change, trend }) => (
+const MetricCard = ({ title, value, change, trend }: { title: string; value: string; change: number; trend: 'up' | 'down' }) => (
   <div className="bg-white rounded-xl p-4 shadow-sm">
     <h3 className="text-sm font-medium text-gray-500 mb-1">{title}</h3>
     <p className="text-2xl font-bold">{value}</p>
