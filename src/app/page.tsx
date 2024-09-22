@@ -7,21 +7,11 @@ import MetricCard from '@/components/MetricCard';
 import WalletCard from '@/components/WalletCard';
 import Calendar from '@/components/Calendar';
 import FinancialGoals from '@/components/FinancialGoals';
-import PortfolioDistribution from '@/components/PortfolioDistribution';
-import FinancialTrends from '@/components/FinancialTrends';
-import { Wallet, GraduationCap, PieChart as PieChartIcon, Target, ChevronRight, Search, Calendar as CalendarIcon, Filter as FilterIcon, Bell, MessageCircle, ArrowRight, ArrowUp as ArrowUpIcon, ArrowDown as ArrowDownIcon, Plus as PlusIcon, DollarSign, PiggyBank, ChevronLeft } from 'lucide-react';
+// import PortfolioDistribution from '@/components/PortfolioDistribution';
+// import FinancialTrends from '@/components/FinancialTrends';
+import { GraduationCap, CalendarIcon, FilterIcon, MessageCircle, Plus as PlusIcon, DollarSign, PiggyBank } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Slider } from "@/components/ui/slider";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { format, startOfMonth, endOfMonth, eachDayOfInterval, isSameMonth, isToday } from 'date-fns';
-import { it } from 'date-fns/locale';
-import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer } from 'recharts';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Home() {
   const [balance, setBalance] = React.useState(12750);
@@ -74,10 +64,12 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Commented out potentially problematic components
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <PortfolioDistribution />
             <FinancialTrends />
           </div>
+          */}
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card className="bg-white shadow-lg">
