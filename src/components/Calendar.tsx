@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -35,6 +37,8 @@ const Calendar = () => {
       </CardHeader>
       <CardContent>
         {/* Calendar content */}
+        {/* Add children prop to CardContent */}
+        <div>{/* Render your calendar days or events here */}</div>
       </CardContent>
     </Card>
   );

@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Slider } from "@/components/ui/slider";
 
-const WelcomeCard = ({ balance, percentage }: { balance: number, percentage: number }) => {
+const WelcomeCard = ({ balance, percentage, children }: { balance: number, percentage: number, children: React.ReactNode }) => {
   return (
     <Card className="overflow-hidden bg-gradient-to-br from-indigo-100 to-purple-100">
       <CardContent className="p-6 flex justify-between items-start">
@@ -34,6 +34,8 @@ const WelcomeCard = ({ balance, percentage }: { balance: number, percentage: num
               <Card className="bg-white shadow-lg">
                 <CardContent className="p-4 space-y-4">
                   {/* Earn content */}
+                  {/* Add children here */}
+                  <div>Your content goes here</div>
                 </CardContent>
               </Card>
             </TabsContent>
@@ -41,6 +43,10 @@ const WelcomeCard = ({ balance, percentage }: { balance: number, percentage: num
               <Card className="bg-white shadow-lg">
                 <CardContent className="p-4 space-y-4">
                   {/* Borrow content */}
+                  <CardContent className="p-4 space-y-4">
+                    {/* Add children here */}
+                    {children} // Pass children prop
+                  </CardContent>
                 </CardContent>
               </Card>
             </TabsContent>
