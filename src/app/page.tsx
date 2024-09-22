@@ -81,8 +81,8 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  "Considera di allocare il 20% delle tue entrate mensili al fondo di emergenza.
-                  Questo ti aiuterà a costruire una solida base finanziaria per imprevisti futuri."
+                  &quot;Considera di allocare il 20% delle tue entrate mensili al fondo di emergenza.
+                  Questo ti aiuterà a costruire una solida base finanziaria per imprevisti futuri.&quot;
                 </p>
               </CardContent>
             </Card>
@@ -96,7 +96,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-2">
-                  Borsa di Studio per l'Innovazione Tecnologica
+                  Borsa di Studio per l&apos;Innovazione Tecnologica
                 </p>
                 <p className="text-sm text-gray-500">Scadenza: 15 Giugno 2023</p>
                 <Button className="mt-4 bg-indigo-500 hover:bg-indigo-600 text-white transition-all duration-200 ease-in-out transform hover:scale-105">

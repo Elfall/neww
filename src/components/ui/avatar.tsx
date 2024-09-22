@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface AvatarProps {
   children: React.ReactNode;
@@ -12,10 +13,20 @@ export const Avatar: React.FC<AvatarProps> = ({ children }) => {
   );
 };
 
-interface AvatarImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {}
+interface AvatarImageProps {
+  src: string;
+  alt: string;
+}
 
-export const AvatarImage: React.FC<AvatarImageProps> = (props) => {
-  return <img className="w-full h-full object-cover" {...props} />;
+export const AvatarImage: React.FC<AvatarImageProps> = ({ src, alt }) => {
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      layout="fill"
+      objectFit="cover"
+    />
+  );
 };
 
 interface AvatarFallbackProps {
