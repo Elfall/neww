@@ -5,14 +5,7 @@ import Navbar from '../components/Navbar';
 import WelcomeCard from '../components/WelcomeCard';
 import MetricCard from '../components/MetricCard';
 import WalletCard from '../components/WalletCard';
-import Calendar from '../components/Calendar';
 import FinancialGoals from '../components/FinancialGoals';
-import BudgetOverview from '../components/BudgetOverview';
-import FinancialSummary from '../components/FinancialSummary';
-import RecentExpenses from '../components/RecentExpenses';
-import ScholarshipOverview from '../components/ScholarshipOverview';
-import PortfolioDistribution from '../components/PortfolioDistribution';
-import FinancialTrends from '../components/FinancialTrends';
 
 export default function Home() {
   return (
@@ -25,14 +18,7 @@ export default function Home() {
         <MetricCard title="Revenue" value={10234} change={20} icon={<span>💰</span>} />
       </div>
       <WalletCard title="Main Wallet" balance={5000} change={2.5} currency="€" color="from-blue-500 to-blue-700" />
-      <Calendar />
       <FinancialGoals />
-      <BudgetOverview />
-      <FinancialSummary />
-      <RecentExpenses />
-      <ScholarshipOverview />
-      <PortfolioDistribution />
-      <FinancialTrends />
     </main>
   );
 }
