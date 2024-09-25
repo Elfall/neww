@@ -1,11 +1,11 @@
 "use client";
 
 import React from 'react';
-import Navbar from '../components/Navbar';
-import WelcomeCard from '../components/WelcomeCard';
-import MetricCard from '../components/MetricCard';
-import WalletCard from '../components/WalletCard';
-import FinancialGoals from '../components/FinancialGoals';
+import Navbar from '@/components/Navbar';
+import WelcomeCard from '@/components/WelcomeCard';
+import MetricCard from '@/components/MetricCard';
+import WalletCard from '@/components/WalletCard';
+import FinancialGoals from '@/components/FinancialGoals';
 
 export default function Home() {
   return (
